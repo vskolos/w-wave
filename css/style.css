@@ -27,8 +27,152 @@ body {
   font-family: 'Muller', sans-serif;
 }
 
+/* Common */
+
 .container {
   margin: 0 auto;
   padding: 0 32px;
 }
 
+.btn {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* Header */
+
+.header__top {
+  padding-block: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light);
+}
+
+.header__top-logo {
+  width: 88px;
+}
+
+.header__btn {
+  padding: 7px 23px 8.5px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 77px;
+}
+
+.header__main {
+  padding-block: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__main-logo {
+  display: none;
+}
+
+.header__mobile-menu-btn > svg {
+  display: block;
+}
+
+.header__search-btn > svg {
+  display: block;
+}
+
+.header__page-nav {
+  display: none;
+}
+
+.header__main-btns {
+  display: flex;
+}
+
+.header__main-btns .header__btn {
+  display: none;
+}
+
+.header__mobile-music {
+  padding-block: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-light);
+}
+
+.header__mobile-music-plus {
+  margin-right: 4px;
+}
+
+.header__mobile-music-text {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.header__bottom {
+  position: relative;
+  display: flex;
+}
+
+.header__site-nav {
+  display: none;
+}
+
+.header__music {
+  padding-block: 9px;
+  position: absolute;
+  display: none;
+  /* display: flex; */
+  z-index: 10;
+  background-color: var(--color-white);
+}
+
+.header__player {
+  margin-right: 35px;
+  min-width: 113px;
+}
+
+.header__player:not(:last-child) {
+  border-right: 1px solid var(--color-shade-gray);
+}
+
+.header__play-btn {
+  margin-bottom: 5px;
+}
+
+.header__player-descr {
+  font-size: .625rem;
+  line-height: 1;
+  color: var(--color-text-gray);
+}
+
+.header__player-title {
+  font-size: .875rem;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+/* Hero */
+
+.hero {
+  padding-block: 39px;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero__title--italic {
+  font-weight: 400;
+  font-style: italic;
+}
