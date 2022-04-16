@@ -49,6 +49,11 @@ body {
   list-style: none;
 }
 
+.lnk {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Header */
 
 .header__top {
@@ -188,6 +193,10 @@ body {
   margin-bottom: 20px;
   font-size: .875rem;
   line-height: 1.5;
+}
+
+.hero__link {
+  color: var(--color-primary);
 }
 
 .hero__btn {
@@ -424,7 +433,6 @@ body {
   font-size: .75rem;
   line-height: 1;
   color: var(--color-primary);
-  text-decoration: none;
 }
 
 .show__link-arrow {
