@@ -1502,234 +1502,303 @@
     <section class="playlists">
       <div class="container">
         <div class="playlists-wrapper">
-          <form class="playlists__aside">
+          <div class="playlists__aside">
             <h2 class="playlists__title">
               Плейлисты
             </h2>
-            <p class="playlists__radio-title">
+            <p class="playlists__genres-title">
               Жанр
             </p>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Постпанк
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Хардкор
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Панк-рок
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Рок
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Прогрессивный рок
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Электронная музыка
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Классическая музыка
-            </label>
-            <label class="playlists__label">
-              <input class="playlists__radio" type="radio">
-              <span class="playlists__radio-custom"></span>
-              Звуки природы и шум города
-            </label>
-            <p class="playlists__info">
-              Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних.
-            </p>
-            <p class="playlists__copyright">
-              © 2021 l W-Wave
-            </p>
-            <div class="playlists__age">
-
+            <form class="playlists__genres-wrapper">
+              <ul class="lst playlists__genres">
+                <li class="playlists__genre">
+                  <label class="playlists__label playlists__label--active">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Постпанк
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Хардкор
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Панк-рок
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Рок
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Прогрессивный рок
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Электронная музыка
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Классическая музыка
+                  </label>
+                </li>
+                <li class="playlists__genre">
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" type="radio">
+                    <span class="playlists__radio-custom"></span>
+                    Звуки природы и шум города
+                  </label>
+                </li>
+              </ul>
+            </form>
+            <div class="playlists__age-wrapper">
+              <p class="playlists__age-info">
+                Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних.
+              </p>
+              <p class="playlists__age-copyright">
+                © 2021 l W-Wave
+              </p>
+              <svg class="playlists__age-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68945 20H7.74023V13.8945C7.74023 13.3867 7.75586 12.9062 7.78711 12.4531C7.70508 12.5352 7.61328 12.6211 7.51172 12.7109C7.41016 12.8008 6.94531 13.1816 6.11719 13.8535L5.60156 13.1855L7.86914 11.4336H8.68945V20ZM14.7891 11.3105C15.5703 11.3105 16.1895 11.4922 16.6465 11.8555C17.1035 12.2188 17.332 12.7207 17.332 13.3613C17.332 13.7832 17.2012 14.168 16.9395 14.5156C16.6777 14.8633 16.2598 15.1797 15.6855 15.4648C16.3809 15.7969 16.875 16.1465 17.168 16.5137C17.4609 16.877 17.6074 17.2988 17.6074 17.7793C17.6074 18.4902 17.3594 19.0586 16.8633 19.4844C16.3672 19.9062 15.6875 20.1172 14.8242 20.1172C13.9102 20.1172 13.207 19.918 12.7148 19.5195C12.2227 19.1172 11.9766 18.5488 11.9766 17.8145C11.9766 16.834 12.5742 16.0703 13.7695 15.5234C13.2305 15.2188 12.8438 14.8906 12.6094 14.5391C12.375 14.1836 12.2578 13.7871 12.2578 13.3496C12.2578 12.7285 12.4863 12.2344 12.9434 11.8672C13.4043 11.4961 14.0195 11.3105 14.7891 11.3105ZM12.9375 17.8379C12.9375 18.3066 13.0996 18.6719 13.4238 18.9336C13.752 19.1953 14.2109 19.3262 14.8008 19.3262C15.3828 19.3262 15.8359 19.1895 16.1602 18.916C16.4844 18.6426 16.6465 18.2676 16.6465 17.791C16.6465 17.4121 16.4941 17.0762 16.1895 16.7832C15.8848 16.4863 15.3535 16.1992 14.5957 15.9219C14.0137 16.1719 13.5918 16.4492 13.3301 16.7539C13.0684 17.0547 12.9375 17.416 12.9375 17.8379ZM14.7773 12.1016C14.2891 12.1016 13.9062 12.2188 13.6289 12.4531C13.3516 12.6875 13.2129 13 13.2129 13.3906C13.2129 13.75 13.3281 14.0586 13.5586 14.3164C13.7891 14.5742 14.2148 14.832 14.8359 15.0898C15.3945 14.8555 15.7891 14.6035 16.0195 14.334C16.2539 14.0645 16.3711 13.75 16.3711 13.3906C16.3711 12.9961 16.2285 12.6836 15.9434 12.4531C15.6621 12.2188 15.2734 12.1016 14.7773 12.1016ZM22.0605 15.3652H24.4746V16.1738H22.0605V18.6699H21.2461V16.1738H18.8438V15.3652H21.2461V12.8574H22.0605V15.3652Z" fill="#A1A6B4"/>
+                <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#A1A6B4"/>
+              </svg>
             </div>
-          </form>
-          <div class="playlists__cards">
-            <ul class="lst playlists__cards-list">
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+          </div>
+          <ul class="lst playlists__cards">
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-ploho.jpg, img/playlist-ploho@2x.jpg 2x">
+                  <img src="img/playlist-ploho.jpg" srcset="img/playlist-ploho@2x.jpg 2x" alt="Ploho - 3 последних альбома">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Ploho
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   3 последних альбома
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-molchat-doma.jpg, img/playlist-molchat-doma@2x.jpg 2x">
+                  <img src="img/playlist-molchat-doma.jpg" srcset="img/playlist-molchat-doma@2x.jpg 2x" alt="Molchat Doma - Все песни">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Molchat Doma
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Все песни
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-motorama.jpg, img/playlist-motorama@2x.jpg 2x">
+                  <img src="img/playlist-motorama.jpg" srcset="img/playlist-motorama@2x.jpg 2x" alt="Motorama - Все синглы">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Motorama
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Все синглы
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-human-tetris.jpg, img/playlist-human-tetris@2x.jpg 2x">
+                  <img src="img/playlist-human-tetris.jpg" srcset="img/playlist-human-tetris@2x.jpg 2x" alt="Human Tetris - 3 последних альбома">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Human Tetris
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   3 последних альбома
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-buerak.jpg, img/playlist-buerak@2x.jpg 2x">
+                  <img src="img/playlist-buerak.jpg" srcset="img/playlist-buerak@2x.jpg 2x" alt="Буерак - Все EP">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Буерак
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Все EP
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-iyulskie-dni.jpg, img/playlist-iyulskie-dni@2x.jpg 2x">
+                  <img src="img/playlist-iyulskie-dni.jpg" srcset="img/playlist-iyulskie-dni@2x.jpg 2x" alt="Июльские Дни - Альбом «Колокол»">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Июльские Дни
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Альбом «Колокол»
                 </p>
-                <div class="playlist__country playlist__country--ru-RU"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--ru-RU"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-joy-division.jpg, img/playlist-joy-division@2x.jpg 2x">
+                  <img src="img/playlist-joy-division.jpg" srcset="img/playlist-joy-division@2x.jpg 2x" alt="Joy Division - Лучшее за всё время">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Joy Division
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Лучшее за всё время
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-the-cure.jpg, img/playlist-the-cure@2x.jpg 2x">
+                  <img src="img/playlist-the-cure.jpg" srcset="img/playlist-the-cure@2x.jpg 2x" alt="The Cure - Лучшее за всё время">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   The Cure
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Лучшее за всё время
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-the-smiths.jpg, img/playlist-the-smiths@2x.jpg 2x">
+                  <img src="img/playlist-the-smiths.jpg" srcset="img/playlist-the-smiths@2x.jpg 2x" alt="The Smiths - Период 1984-1988">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   The Smiths
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Период 1984-1988
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-new-order.jpg, img/playlist-new-order@2x.jpg 2x">
+                  <img src="img/playlist-new-order.jpg" srcset="img/playlist-new-order@2x.jpg 2x" alt="New Order - Хиты">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   New Order
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Хиты
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-bauhaus.jpg, img/playlist-bauhaus@2x.jpg 2x">
+                  <img src="img/playlist-bauhaus.jpg" srcset="img/playlist-bauhaus@2x.jpg 2x" alt="">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Bauhaus
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   Все синглы
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-              <li class="playlist playlists__card">
-                <div class="playlist__image">
-                  <picture>
-
-                  </picture>
-                </div>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+            <li class="playlist playlists__card">
+              <div class="playlist__image">
+                <picture>
+                  <source srcset="img/playlist-gang-of-four.jpg, img/playlist-gang-of-four@2x.jpg 2x">
+                  <img src="img/playlist-gang-of-four.jpg" srcset="img/playlist-gang-of-four@2x.jpg 2x" alt="">
+                </picture>
+              </div>
+              <div class="playlist__info">
                 <h3 class="playlist__title">
                   Gang Of Four
                 </h3>
-                <p class="playlist__info">
+                <p class="playlist__descr">
                   3 последних альбома
                 </p>
-                <div class="playlist__country playlist__country--en-GB"></div>
-              </li>
-            </ul>
+              </div>
+              <div class="playlist__country playlist__country--en-GB"></div>
+            </li>
+          </ul>
+          <div class="playlists__age-wrapper-after">
+            <p class="playlists__age-info">
+              Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних.
+            </p>
+            <p class="playlists__age-copyright">
+              © 2021 l W-Wave
+            </p>
+            <svg class="playlists__age-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.68945 20H7.74023V13.8945C7.74023 13.3867 7.75586 12.9062 7.78711 12.4531C7.70508 12.5352 7.61328 12.6211 7.51172 12.7109C7.41016 12.8008 6.94531 13.1816 6.11719 13.8535L5.60156 13.1855L7.86914 11.4336H8.68945V20ZM14.7891 11.3105C15.5703 11.3105 16.1895 11.4922 16.6465 11.8555C17.1035 12.2188 17.332 12.7207 17.332 13.3613C17.332 13.7832 17.2012 14.168 16.9395 14.5156C16.6777 14.8633 16.2598 15.1797 15.6855 15.4648C16.3809 15.7969 16.875 16.1465 17.168 16.5137C17.4609 16.877 17.6074 17.2988 17.6074 17.7793C17.6074 18.4902 17.3594 19.0586 16.8633 19.4844C16.3672 19.9062 15.6875 20.1172 14.8242 20.1172C13.9102 20.1172 13.207 19.918 12.7148 19.5195C12.2227 19.1172 11.9766 18.5488 11.9766 17.8145C11.9766 16.834 12.5742 16.0703 13.7695 15.5234C13.2305 15.2188 12.8438 14.8906 12.6094 14.5391C12.375 14.1836 12.2578 13.7871 12.2578 13.3496C12.2578 12.7285 12.4863 12.2344 12.9434 11.8672C13.4043 11.4961 14.0195 11.3105 14.7891 11.3105ZM12.9375 17.8379C12.9375 18.3066 13.0996 18.6719 13.4238 18.9336C13.752 19.1953 14.2109 19.3262 14.8008 19.3262C15.3828 19.3262 15.8359 19.1895 16.1602 18.916C16.4844 18.6426 16.6465 18.2676 16.6465 17.791C16.6465 17.4121 16.4941 17.0762 16.1895 16.7832C15.8848 16.4863 15.3535 16.1992 14.5957 15.9219C14.0137 16.1719 13.5918 16.4492 13.3301 16.7539C13.0684 17.0547 12.9375 17.416 12.9375 17.8379ZM14.7773 12.1016C14.2891 12.1016 13.9062 12.2188 13.6289 12.4531C13.3516 12.6875 13.2129 13 13.2129 13.3906C13.2129 13.75 13.3281 14.0586 13.5586 14.3164C13.7891 14.5742 14.2148 14.832 14.8359 15.0898C15.3945 14.8555 15.7891 14.6035 16.0195 14.334C16.2539 14.0645 16.3711 13.75 16.3711 13.3906C16.3711 12.9961 16.2285 12.6836 15.9434 12.4531C15.6621 12.2188 15.2734 12.1016 14.7773 12.1016ZM22.0605 15.3652H24.4746V16.1738H22.0605V18.6699H21.2461V16.1738H18.8438V15.3652H21.2461V12.8574H22.0605V15.3652Z" fill="#A1A6B4"/>
+              <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#A1A6B4"/>
+            </svg>
           </div>
         </div>
       </div>
