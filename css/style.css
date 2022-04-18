@@ -874,6 +874,10 @@ body {
   color: var(--color-text-gray);
 }
 
+.about__decor-wrapper {
+  display: none;
+}
+
 .about__team {
   margin-bottom: 32px;
   display: flex;
@@ -986,7 +990,8 @@ body {
 }
 
 .footer-wrapper {
-  padding-block: 54px;
+  padding-top: 54px;
+  margin-bottom: 54px;
 }
 
 .footer__logo-socials {
@@ -1016,10 +1021,6 @@ body {
 }
 
 .footer__nav {
-  display: none;
-}
-
-.footer__nav-mobile {
   margin-bottom: 10px;
   padding-block: 30px;
   background-color: var(--color-black);
@@ -1195,6 +1196,14 @@ body {
   .podcast__play-btn {
     width: 48px;
     height: 48px;
+  }
+
+  .podcast__play-btn > circle {
+    stroke: var(--color-text-gray);
+  }
+
+  .podcast__play-btn > path {
+    fill: var(--color-text-gray);
   }
 
   .podcast__stats {
@@ -1476,6 +1485,164 @@ body {
   .playlists__age-copyright {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+
+  /* Speaker */
+
+  .speaker {
+    padding-bottom: 94px;
+  }
+
+  .speaker-wrapper {
+    gap: 50px;
+  }
+
+  .speaker__title {
+    margin-bottom: 19px;
+    font-size: 3rem;
+  }
+
+  .speaker__wave-line {
+    margin-bottom: 18px;
+  }
+
+  .speaker__text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .speaker__text:last-child {
+    margin-bottom: 30px;
+  }
+
+  .speaker__price {
+    margin-bottom: 30px;
+    font-size: 1.875rem;
+  }
+
+  .speaker__btn {
+    padding: 23.5px 12px;
+    width: max-content;
+    font-size: 1.25rem;
+  }
+
+  /* About */
+
+  .about {
+    padding-block: 94px;
+  }
+
+  .about__title {
+    margin-bottom: 12px;
+    font-size: 3rem;
+  }
+
+  .about__pre-text {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+  }
+
+  .about__text {
+    margin-bottom: 29px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .about__decor-wrapper {
+    margin-bottom: 29px;
+    display: block;
+    position: relative;
+    height: 114px;
+  }
+
+  .about__decor {
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('../img/about-decor-tablet.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    overflow: visible;
+  }
+
+  .person__photo {
+    margin-bottom: 31px;
+    height: 255px;
+  }
+
+  .person__name {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+  }
+
+  .person__info {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about__textarea {
+    padding: 29px 31px;
+    font-size: 1.25rem;
+    border-radius: 30px;
+  }
+
+  .about__input {
+    padding: 24px 31px;
+    font-size: 1.25rem;
+  }
+
+  .about__btn {
+    padding: 25px 54px;
+    font-size: 1.25rem;
+  }
+
+  .about__label {
+    margin-top: 0;
+    font-size: .75rem;
+    align-items: flex-end;
+  }
+
+  .about__checkbox-custom {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Footer */
+
+  .footer-wrapper {
+    padding-block: 94px 0;
+  }
+
+  .footer__nav {
+    margin-bottom: 80px;
+    padding-block: 26px 0;
+    background-color: var(--color-light-black);
+  }
+
+  .footer__nav-list {
+    row-gap: 30px;
+  }
+
+  .footer__nav-item {
+    width: 160px;
+  }
+
+  .footer__nav-item:nth-child(3n + 2) {
+    padding-left: 44px;
+  }
+
+  .footer__nav-item:nth-child(3n) {
+    padding-left: 95px;
+  }
+
+  .footer__nav-link {
+    font-size: 1rem;
+  }
+
+  .footer__copyright {
+    padding-bottom: 12px;
+    font-size: 1rem;
   }
 
 }
