@@ -182,6 +182,10 @@ body {
   line-height: 1;
 }
 
+.header__age {
+  display: none;
+}
+
 /* Hero */
 
 .hero {
@@ -659,15 +663,20 @@ body {
   display: none;
 }
 
+.playlists__genres-col {
+  display: flex;
+  gap: 15px;
+}
+
 .playlists__radio-custom {
   display: none;
 }
 
-.playlists__genre:first-child {
+.playlists__genres-col:first-child {
   margin-left: 32px;
 }
 
-.playlists__genre:last-child {
+.playlists__genres-col:last-child {
   margin-right: 32px;
 }
 
@@ -990,8 +999,7 @@ body {
 }
 
 .footer-wrapper {
-  padding-top: 54px;
-  margin-bottom: 54px;
+  padding-block: 54px;
 }
 
 .footer__logo-socials {
@@ -1021,6 +1029,10 @@ body {
 }
 
 .footer__nav {
+  display: none;
+}
+
+.footer__nav-mobile {
   margin-bottom: 10px;
   padding-block: 30px;
   background-color: var(--color-black);
@@ -1033,7 +1045,7 @@ body {
 }
 
 .footer__nav-item {
-  width: 113px;
+  width: calc(50% - 15px);
   line-height: 0;
 }
 
@@ -1048,11 +1060,12 @@ body {
   background-image: url('../img/wave-line.svg');
   background-size: auto;
   background-repeat: repeat-x;
+  background-position: left 17px center;
 }
 
 .footer__copyright {
   margin-block: 0;
-  padding-block: 8px;
+  padding-block: 8px 12px;
   text-align: center;
   font-size: .75rem;
   line-height: 1;
@@ -1102,7 +1115,8 @@ body {
   }
 
   .header__bottom {
-    padding-block: 18px;
+    padding-block: 17px;
+    border: 1px solid var(--color-light);
   }
 
   .header__site-nav {
@@ -1169,6 +1183,7 @@ body {
 
   .podcast__image > picture > * {
     width: 100%;
+    top: auto;
     height: auto;
     transform: none;
   }
@@ -1399,20 +1414,21 @@ body {
   }
 
   .playlists__genres {
-    flex-wrap: wrap;
-    gap: 30px 34px;
+    gap: 34px;
     position: inherit;
+    width: auto;
   }
 
-  .playlists__genre {
-    display: inline-block;
+  .playlists__genres-col {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .playlists__genre:first-child {
+  .playlists__genres-col:first-child {
     margin-left: 0;
   }
 
-  .playlists__genre:last-child {
+  .playlists__genres-col:last-child {
     margin-right: 0;
   }
 
@@ -1612,37 +1628,377 @@ body {
 
   .footer-wrapper {
     padding-block: 94px 0;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
   }
 
   .footer__nav {
-    margin-bottom: 80px;
-    padding-block: 26px 0;
+    display: block;
     background-color: var(--color-light-black);
   }
 
   .footer__nav-list {
-    row-gap: 30px;
+    gap: initial;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .footer__nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: max-content;
   }
 
   .footer__nav-item {
-    width: 160px;
-  }
-
-  .footer__nav-item:nth-child(3n + 2) {
-    padding-left: 44px;
-  }
-
-  .footer__nav-item:nth-child(3n) {
-    padding-left: 95px;
+    width: auto;
   }
 
   .footer__nav-link {
     font-size: 1rem;
   }
 
+  .footer__nav-mobile {
+    display: none;
+  }
+
+  .footer__wave-line {
+    background-image: url('../img/wave-line-tablet.svg');
+    background-position: center center;
+  }
+
   .footer__copyright {
     padding-bottom: 12px;
     font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  /* Common */
+
+  .container {
+    padding-inline: 100px;
+  }
+
+  /* Header */
+
+  .header__mobile-menu-btn {
+    display: none;
+  }
+
+  .header__page-nav {
+    margin-right: 34px;
+    display: block;
+    flex-grow: 1;
+  }
+
+  .page-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-nav__link {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .header__bottom {
+    padding-block: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-nav {
+    margin-right: 34px;
+  }
+
+  .site-nav__item:last-child {
+    display: none;
+  }
+
+  .header__music {
+    padding-block: 0;
+    position: inherit;
+    display: flex;
+    justify-content: end;
+    flex-shrink: 0;
+  }
+
+  .header__player {
+    margin-right: 0;
+    padding: 2.5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8.5px;
+    border-left: 1px solid var(--color-shade-gray);
+    border-right: 1px solid var(--color-shade-gray);
+  }
+
+  .header__player:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  .header__play-btn {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .header__player-info {
+    flex-shrink: 0;
+    min-width: 96px;
+  }
+
+  .header__player-descr {
+    margin-bottom: 5px;
+    font-size: .75rem;
+  }
+
+  .header__player-title {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+
+  .hero {
+    background-image: url('../img/hero-mic.jpg');
+    background-position: right 100px center;
+    background-repeat: no-repeat;
+  }
+  @media /* only for retina displays */
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../img/hero-mic@2x.jpg');
+      background-size: 256px 262px;
+    }
+  }
+
+  .hero__text {
+    width: 65%;
+  }
+
+  /* Podcasts */
+
+  .podcasts {
+    padding-bottom: 92px;
+  }
+
+  .podcasts__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .podcasts__card {
+    width: calc(50% - 15px);
+  }
+
+  /* Shows */
+
+  .shows {
+    padding-bottom: 34px;
+  }
+
+  .shows-wrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .shows__aside {
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
+  }
+
+  .shows__authors {
+    margin-bottom: 227px;
+    width: 100%;
+  }
+
+  .shows__archive-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shows__archive-mic {
+    margin-bottom: 24px;
+    width: 65px;
+    min-height: 89px;
+  }
+
+  .shows__archive-info {
+    max-width: none;
+  }
+
+  .shows__archive-btn {
+    margin-bottom: 12px;
+    padding-block: 8px;
+  }
+
+  .shows__cards {
+    padding-top: 14px;
+  }
+
+  .shows__archive-wrapper-after {
+    display: none;
+  }
+
+  /* Guests */
+
+  .guests__title,
+  .guests__pre-text,
+  .guests__text {
+    max-width: 65%;
+  }
+
+  .guests__wrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .guests__types {
+    min-width: 540px;
+  }
+
+  .guests__type-names {
+    padding-bottom: 31px;
+    row-gap: 14px;
+  }
+
+  .guest__photo {
+    min-height: 159px;
+  }
+
+  .guest__info {
+    margin-bottom: 29px;
+    width: auto;
+    line-height: 1.82;
+  }
+
+  .guest__btn {
+    padding-inline: 18px;
+  }
+
+  /* Playlists */
+
+  .playlists {
+    padding-bottom: 88px;
+  }
+
+  .playlists__genres-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .playlists__genres {
+    row-gap: 16.5px;
+    width: 65%;
+  }
+
+  .playlists__genres-col {
+    gap: 16px;
+  }
+
+  .playlists__card {
+    width: calc(33.33% - 20px);
+  }
+
+  .playlist__title {
+    margin-bottom: 4px;
+  }
+
+  /* About */
+
+  .speaker {
+    padding-top: 94px;
+  }
+
+  .speaker-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .speaker__text:last-child {
+    line-height: 1.82;
+  }
+
+  /* About */
+
+  .about__text-wrapper {
+    background-image: url('../img/about-decor-tablet-landscape.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .about__title,
+  .about__pre-text,
+  .about__text {
+    width: 65%;
+  }
+
+  .about__decor-wrapper {
+    display: none;
+  }
+
+  .about__team {
+    margin-bottom: 31px;
+  }
+
+  .person__photo {
+    margin-bottom: 32px;
+  }
+
+  .about__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about__input {
+    width: calc(50% - 15px);
+  }
+
+  .about__label {
+    flex-basis: 100%;
+  }
+
+  /* Footer */
+
+  .footer-wrapper {
+    padding-top: 95px;
+    margin-bottom: 94px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo-socials {
+    padding-left: 8px;
+  }
+
+  .footer__social-link > svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer__nav {
+    min-width: 445px;
+  }
+
+  .footer__nav-col {
+    gap: 20px;
+  }
+
+  .footer__wave-line {
+    background-image: url('../img/wave-line-tablet-landscape.svg');
+  }
+
+  .footer__copyright {
+    padding-top: 10px;
   }
 
 }
