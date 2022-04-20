@@ -30,8 +30,6 @@ body {
   min-width: 320px;
 }
 
-/* Common */
-
 .container {
   margin-inline: auto;
   padding-inline: 32px;
@@ -69,12 +67,15 @@ body {
 
 /* Header */
 
+.header__top-wrapper {
+  background-color: var(--color-light);
+}
+
 .header__top {
   padding-block: 9px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-light);
 }
 
 .header__top-logo {
@@ -141,8 +142,11 @@ body {
   color: var(--color-primary);
 }
 
-.header__bottom {
+.header__bottom-wrapper {
   position: relative;
+}
+
+.header__bottom {
   display: flex;
 }
 
@@ -702,12 +706,10 @@ body {
 }
 
 .playlists__cards {
-  padding-bottom: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  border-bottom: 1px solid var(--color-light);
 }
 
 .playlists__card {
@@ -768,6 +770,11 @@ body {
 
 .playlist__country--en-GB {
   background-image: url('../img/flag-en-GB.svg');
+}
+
+.playlists__age-wrapper-after {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-light);
 }
 
 .playlists__age-info {
@@ -1074,8 +1081,6 @@ body {
 
 @media (min-width: 768px) {
 
-  /* Common */
-
   .container {
     padding-inline: 114px;
   }
@@ -1114,9 +1119,12 @@ body {
     display: none;
   }
 
+  .header__bottom-wrapper {
+    border: 1px solid var(--color-light);
+  }
+
   .header__bottom {
     padding-block: 17px;
-    border: 1px solid var(--color-light);
   }
 
   .header__site-nav {
@@ -1458,8 +1466,7 @@ body {
   }
 
   .playlists__cards {
-    padding-bottom: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .playlist {
@@ -1491,6 +1498,10 @@ body {
   .playlist__country {
     right: auto;
     left: 0;
+  }
+
+  .playlists__age-wrapper-after {
+    padding-top: 30px;
   }
 
   .playlists__age-info {
@@ -1678,8 +1689,6 @@ body {
 
 @media (min-width: 1024px) {
 
-  /* Common */
-
   .container {
     padding-inline: 100px;
   }
@@ -1712,7 +1721,7 @@ body {
     justify-content: space-between;
   }
 
-  .site-nav {
+  .header__site-nav {
     margin-right: 34px;
   }
 
@@ -1781,8 +1790,12 @@ body {
     }
   }
 
+  .hero__title {
+    max-width: 65%;
+  }
+
   .hero__text {
-    width: 65%;
+    max-width: 65%;
   }
 
   /* Podcasts */
@@ -1939,7 +1952,7 @@ body {
   .about__title,
   .about__pre-text,
   .about__text {
-    width: 65%;
+    max-width: 65%;
   }
 
   .about__decor-wrapper {
@@ -1999,6 +2012,243 @@ body {
 
   .footer__copyright {
     padding-top: 10px;
+  }
+
+}
+
+@media (min-width: 1310px) {
+
+  .container {
+    padding-inline: calc((100vw - 1110px) / 2);
+  }
+
+  /* Header */
+
+  .header__top {
+    display: none;
+  }
+
+  .header__main-logo {
+    margin-right: 80px;
+    display: block;
+  }
+
+  .header__page-nav {
+    margin-right: 80px;
+  }
+
+  .header__btn {
+    padding-inline: 31px;
+  }
+
+  .header__site-nav {
+    margin-right: 52px;
+  }
+
+  .header__music {
+    margin-right: 52px;
+  }
+
+  .header__player {
+    min-width: 175px;
+  }
+
+  .header__age {
+    margin-block: -11px;
+    display: block;
+    line-height: 0;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-block: 94px;
+    background-image: url('../img/hero-mic-desktop.jpg');
+    background-position: right calc((100vw - 1110px) / 2) center;
+  }
+  @media /* only for retina displays */
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../img/hero-mic-desktop@2x.jpg');
+      background-size: 350px 372px;
+    }
+  }
+
+  .hero__title {
+    margin-bottom: 15px;
+    max-width: 55%;
+  }
+
+  .hero__text {
+    margin-bottom: 45px;
+    max-width: 55%;
+  }
+
+  /* Podcasts */
+
+  .podcasts {
+    padding-bottom: 94px;
+  }
+
+  /* Shows */
+
+  .shows__aside {
+    width: calc(25% - 22.5px);
+  }
+
+  .shows__card {
+    width: calc(33% - 17.5px);
+  }
+
+  .guests__title,
+  .guests__pre-text,
+  .guests__text {
+    max-width: 70%;
+  }
+
+  .guests__types {
+    width: calc(67% - 15px);
+  }
+
+  .guests__name {
+    width: calc(25% - 22.5px);
+  }
+
+  .guests__person-info {
+    width: calc(33% - 15px);
+  }
+
+  .guest__photo {
+    margin-bottom: 13px;
+    min-height: 220px;
+  }
+
+  /* Playlists */
+
+  .playlists {
+    padding-bottom: 94px;
+  }
+
+  .playlists-wrapper {
+    display: flex;
+    gap: 30px;
+  }
+
+  .playlists__aside {
+    width: calc(33% - 16.3px);
+    min-width: 350px;
+  }
+
+  .playlists__genres {
+    flex-direction: column;
+    width: auto;
+    overflow: auto;
+  }
+
+  .playlists__age-wrapper {
+    padding-top: 30px;
+    display: block;
+    border-top: 1px solid var(--color-shade-gray);
+  }
+
+  .playlists__cards {
+    padding-top: 14px;
+    margin-bottom: 0;
+  }
+
+  .playlists__card {
+    width: calc(25% - 22.5px);
+    flex-direction: column;
+  }
+
+  .playlists__age-wrapper-after {
+    display: none;
+  }
+
+  .playlist__image {
+    width: 100%;
+    height: 160px;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .playlist__image > picture > * {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  .playlist__info {
+    padding: 15px;
+  }
+
+  .playlist__country {
+    left: auto;
+    right: 0;
+  }
+
+  /* Speaker */
+
+  .speaker {
+    padding-bottom: 132px;
+  }
+
+  .speaker-wrapper {
+    gap: 25px;
+  }
+
+  .speaker__photo {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .speaker__wave-line {
+    background-image: url('../img/wave-line-desktop.svg');
+  }
+
+  .speaker__btn {
+    padding-block: 23px;
+  }
+
+  /* About */
+
+  .about__text-wrapper {
+    background-image: url('../img/about-decor-desktop.svg');
+  }
+
+  .about__title {
+    margin-bottom: 13px;
+  }
+
+  .about__title,
+  .about__pre-text,
+  .about__text {
+    max-width: 58%;
+  }
+
+  .about__person {
+    width: calc(25% - 22.5px);
+  }
+
+  .about__form {
+    max-width: 920px;
+  }
+
+  /* Footer */
+
+  .footer-wrapper {
+    padding-top: 93px;
+  }
+
+  .footer__copyright {
+    padding-top: 9px;
   }
 
 }
