@@ -86,7 +86,8 @@
           <rect y="11" width="24" height="3" rx="1.5" fill="#6D31EE" />
         </svg>
       </button>
-      <nav class="page-nav header__page-nav header__page-nav--opened">
+      <!-- <nav class="page-nav header__page-nav header__page-nav--opened"> -->
+      <nav class="page-nav header__page-nav">
         <button class="btn header__mobile-menu-close-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4.5752" y="2.95406" width="24" height="3" rx="1.5" transform="rotate(45 4.5752 2.95406)" fill="#6D31EE"/>
@@ -984,532 +985,544 @@
         <div class="guests__wrapper">
           <ul class="lst guests__types">
             <li class="guests__type">
-              <div class="guests__type-wrapper guests__type-wrapper--opened">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Блогеры
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="guests__type">
-              <div class="guests__type-wrapper">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Арт-критики
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="guests__type">
-              <div class="guests__type-wrapper">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Художники
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="guests__type">
-              <div class="guests__type-wrapper">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Люди науки
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="guests__type">
-              <div class="guests__type-wrapper">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Историки
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="guests__type">
-              <div class="guests__type-wrapper">
-                <h3 class="guests__type-title">
+              <button class="btn guests__type-wrapper">
+                <span class="guests__type-title">
                   Филологи
-                </h3>
+                </span>
                 <svg class="guests__type-unwrap-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="12.125" stroke="#A1A6B4" stroke-width="2" fill="transparent"/>
                   <path d="M10 13.75L15 18.75L20 13.75" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                 </svg>
+              </button>
+              <div class="guests__type-panel">
+                <ul class="lst guests__type-names">
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Сергей Денисов
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Евгений Войновский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Олег Свиридовский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Денис Тельман
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Матвей Мечников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Ольга Мартынова
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Владислав Кауперс
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Юрий Горин
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Константин Прусино
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Дмитрий Михалок
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Михаил Пожитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Максим Сергеев
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Иван Калитников
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Пётр Пиотровский
+                    </a>
+                  </li>
+                  <li class="guests__name">
+                    <a href="#" class="lnk guests__link">
+                      Георгий Полуян
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="lst guests__type-names">
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Сергей Денисов
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Евгений Войновский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Олег Свиридовский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Денис Тельман
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Матвей Мечников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Ольга Мартынова
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Владислав Кауперс
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Юрий Горин
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Константин Прусино
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Дмитрий Михалок
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Михаил Пожитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Максим Сергеев
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Иван Калитников
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Пётр Пиотровский
-                  </a>
-                </li>
-                <li class="guests__name">
-                  <a href="#" class="lnk guests__link">
-                    Георгий Полуян
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
           <div class="guest guests__person-info">
