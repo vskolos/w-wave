@@ -758,6 +758,12 @@ body {
 
 .show {
   background-color: var(--color-white);
+  transition: outline .1s ease-in-out;
+}
+
+.show:focus-within {
+  outline: 1px solid var(--color-primary);
+  outline-offset: 7px;
 }
 
 .show__image {
