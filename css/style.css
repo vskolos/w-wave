@@ -127,6 +127,14 @@ body {
   background-color: var(--color-shade-gray);
 }
 
+.header__mobile-menu-close-btn {
+  display: none;
+}
+
+.header__page-nav--opened > .header__mobile-menu-close-btn {
+  display: inline;
+}
+
 .page-nav__link {
   transition: color .1s ease-in-out,
     background-color .1s ease-in-out,
