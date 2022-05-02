@@ -544,6 +544,10 @@ body {
   fill: var(--color-primary);
 }
 
+.podcast__stats-btn:hover > svg > path:not(:first-child) {
+  fill: var(--color-white);
+}
+
 .podcast__stats-btn:hover > .podcast__stats-text {
   color: var(--color-primary);
 }
@@ -566,7 +570,8 @@ body {
   color: var(--color-white);
 }
 
-.podcast__stats-btn:active > svg > path {
+.podcast__stats-btn:active > svg > path:first-child,
+.podcast__stats-btn:active > svg > path:not(:first-child) {
   fill: var(--color-primary-shade);
 }
 
@@ -661,6 +666,7 @@ body {
 .choices {
   margin-bottom: 30px;
   border-radius: 10px;
+  border: 1px solid transparent;
 }
 
 .choices[data-type*=select-one]::after {
@@ -669,6 +675,7 @@ body {
   height: 9px;
   background-image: url('../img/select-arrow.svg');
   border: none;
+  transition: transform .1s ease-in-out;
   z-index: 3;
 }
 
@@ -679,28 +686,32 @@ body {
 
 .shows__authors,
 .choices__inner {
+  margin: -1px;
+  padding: 9.5px 7px 11px;
   position: relative;
-  padding: 10.5px 8px 12px;
-  width: 100%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   border: none;
   background-color: var(--color-light);
+  border: 1px solid var(--color-light);
   border-radius: 10px;
   cursor: pointer;
-  transition: outline .1s ease-in-out,
+  transition: border-color .1s ease-in-out,
     background-color .1s ease-in-out;
   z-index: 2;
 }
 
 .choices:hover > .choices__inner {
   background-color: #f5f6f7;
+  border-color: #f5f6f7;
 }
 
 .choices:focus-visible {
-  outline: 1px solid var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .choices:focus-visible > .choices__inner {
-  outline: 1px solid var(--color-light);
+  border-color: var(--color-light);
 }
 
 .choices:active {
@@ -713,6 +724,8 @@ body {
 
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
+  margin: -1px;
+  width: calc(100% + 2px);
   padding-top: 10px;
   top: calc(100% - 10px);
 }
@@ -990,7 +1003,7 @@ body {
 }
 
 .guests__type-unwrap-button {
-  transition: transform .6s ease-in-out;
+  transition: transform .3s ease-in-out;
 }
 
 .guests__type-unwrap-button > circle {
@@ -1055,45 +1068,69 @@ body {
   width: 113.5px;
 }
 
-.guests__link {
+.guests__btn {
+  padding: 0;
   display: inline-block;
   max-width: 101px;
+  text-align: left;
   font-size: .875rem;
   line-height: 1.1;
   color: var(--color-white);
+  cursor: pointer;
   transition: color .1s ease-in-out,
     background-color .1s ease-in-out,
     outline .1s ease-in-out;
 }
 
-.guests__link:hover {
+.guests__btn:hover {
   color: var(--color-primary-light);
 }
 
-.guests__link:focus-visible {
+.guests__btn:focus-visible {
   background-color: var(--color-primary-light);
   outline: 3px solid var(--color-primary-light);
   outline-offset: 0;
 }
 
-.guests__link:active {
+.guests__btn:active {
   color: var(--color-primary);
 }
 
+.guests__btn--active {
+  color: var(--color-primary-light);
+}
+
 .guest {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.guest--active {
+  display: flex;
 }
 
 .guest__photo {
   margin-bottom: 12px;
   width: 100%;
-  min-height: 159px;
+  height: 159px;
+  display: block;
+  line-height: 0;
+  background-color: var(--color-light-black);
+  overflow: hidden;
+}
+
+.guest__photo--nobody {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-light-black);
+}
+
+.guest__photo > picture > * {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 .guest__socials {
@@ -1672,6 +1709,23 @@ body {
   color: var(--color-white);
   background-color: var(--color-primary);
   border-radius: 40px;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out,
+    outline .1s ease-in-out;
+}
+
+.about__btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.about__btn:focus-visible {
+  background-color: var(--color-primary-light);
+  outline: 2px solid var(--color-primary-shade);
+  outline-offset: -2px;
+}
+
+.about__btn:active {
+  background-color: var(--color-primary-shade);
 }
 
 .about__label {
@@ -1682,6 +1736,7 @@ body {
   font-size: .5625rem;
   line-height: 1;
   color: var(--color-white);
+  cursor: pointer;
 }
 
 .about__checkbox-custom {
@@ -2102,7 +2157,7 @@ body {
   }
 
   .guest__photo {
-    min-height: 220px;
+    height: 220px;
   }
 
   .guest__socials {
@@ -2615,7 +2670,7 @@ body {
   }
 
   .guest__photo {
-    min-height: 159px;
+    height: 159px;
   }
 
   .guest__info {
@@ -2855,7 +2910,7 @@ body {
 
   .guest__photo {
     margin-bottom: 13px;
-    min-height: 220px;
+    height: 220px;
   }
 
   /* Playlists */
