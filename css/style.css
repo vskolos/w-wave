@@ -2402,9 +2402,11 @@ body {
   .playlists__genres {
     position: initial;
     max-height: 210px;
+    width: auto;
     flex-direction: column;
+    align-content: flex-start;
     flex-wrap: wrap;
-    gap: 30px 0;
+    gap: 30px;
   }
 
   .playlists__genre {
@@ -2875,12 +2877,16 @@ body {
   }
 
   .guests__types {
-    min-width: 540px;
+    width: calc(67% - 15px);
   }
 
   .guests__type-names {
     padding-bottom: 31px;
     row-gap: 13px;
+  }
+
+  .guests__person-info {
+    width: calc(33% - 15px);
   }
 
   .guest__photo {
@@ -2908,12 +2914,8 @@ body {
   }
 
   .playlists__genres {
-    row-gap: 16.5px;
+    gap: 16.5px 35px;
     width: 65%;
-  }
-
-  .playlists__genres-col {
-    gap: 16px;
   }
 
   .playlists__card {
@@ -3110,16 +3112,8 @@ body {
     max-width: 70%;
   }
 
-  .guests__types {
-    width: calc(67% - 15px);
-  }
-
   .guests__name {
     width: calc(25% - 22.5px);
-  }
-
-  .guests__person-info {
-    width: calc(33% - 15px);
   }
 
   .guest__photo {
