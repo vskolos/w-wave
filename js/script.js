@@ -2,6 +2,38 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
+    // Burger menu open/close
+    const burgerBtn = document.querySelector('.header__burger-menu-btn');
+    burgerBtn.addEventListener('click', () => {
+      const burgerMenu = document.querySelector('.header__burger-menu');
+      burgerMenu.classList.add('header__burger-menu--opened');
+    });
+    const burgerMenuLinks = document.querySelectorAll('.burger-menu__close-btn, .burger-menu__page-link, .burger-menu__site-link');
+    burgerMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const burgerMenu = document.querySelector('.header__burger-menu');
+        burgerMenu.classList.remove('header__burger-menu--opened');
+      });
+    });
+
+    // Search box open/close
+    const searchBtns = document.querySelectorAll('.header__search-btn');
+    searchBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+      const searchBox = document.querySelector('.header__search');
+      searchBox.classList.toggle('header__search--opened');
+    });
+    });
+
+    // Header music (mobile) open/close
+    const musicMobileBtn = document.querySelector('.header__mobile-music-btn');
+    musicMobileBtn.addEventListener('click', () => {
+      musicMobileBtn.classList.toggle('header__mobile-music-btn--active');
+      const musicWrapper = document.querySelector('.header__music');
+      musicWrapper.classList.toggle('header__music--opened');
+    });
+
     // Authors selector
     const authors = new Choices('.shows__authors', {
       allowHTML: false,
