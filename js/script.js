@@ -77,9 +77,10 @@
 
     // Show more
     const podcastsPerPage = window.innerWidth < 768 ? 4 : 8;
-    const showMoreBtn = document.querySelector('.podcasts__btn-wrapper');
+    const showMoreBtnWrapper = document.querySelector('.podcasts__btn-wrapper');
+    const showMoreBtn = document.querySelector('.podcasts__btn');
     if (podcasts.length <= podcastsPerPage) {
-      showMoreBtn.classList.add('podcasts__btn-wrapper--hidden');
+      showMoreBtnWrapper.classList.add('podcasts__btn-wrapper--hidden');
     } else {
       podcasts.forEach((podcast, index) => {
         if (index + 1 > podcastsPerPage) {
@@ -89,7 +90,7 @@
       showMoreBtn.addEventListener('click', () => {
         const hiddenPodcasts = document.querySelectorAll('.podcast.podcast--hidden');
         if (hiddenPodcasts.length < 2 * podcastsPerPage) {
-          showMoreBtn.classList.add('podcasts__btn-wrapper--hidden');
+          showMoreBtnWrapper.classList.add('podcasts__btn-wrapper--hidden');
         }
         hiddenPodcasts.forEach((podcast, index) => {
           if (index < podcastsPerPage) {
@@ -99,14 +100,29 @@
       });
     }
 
+    // SHOWS //
+
     // Authors selector
+    function filterShows() {
+      const chosen = document.querySelector('.choices__item--choice.is-highlighted');
+      const shows = document.querySelectorAll('.show');
+      shows.forEach(show => {
+        if (show.dataset.id.split(' ').includes(chosen.dataset.id)) {
+          show.classList.remove('show--hidden');
+        } else {
+          show.classList.add('show--hidden');
+        }
+      });
+    }
     const authors = new Choices('.shows__authors', {
       allowHTML: false,
       searchEnabled: false,
       shouldSort: false,
       position: 'bottom',
       itemSelectText: '',
+      callbackOnInit: filterShows,
     });
+    authors.passedElement.element.addEventListener('choice', filterShows);
 
     // Guests types accordion
     const guestTypes = new Accordion('.guests__types', {

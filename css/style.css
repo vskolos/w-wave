@@ -66,6 +66,24 @@ body {
   margin: -1px;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 /* Header */
 
 .header__top {
@@ -606,6 +624,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
+  animation: fadein .3s;
 }
 
 .podcast--hidden {
@@ -911,6 +930,7 @@ body {
 
 .choices[data-type*=select-one]::after {
   margin-top: -4.5px;
+  right: 14px;
   width: 13px;
   height: 9px;
   background-image: url('../img/select-arrow.svg');
@@ -924,15 +944,16 @@ body {
   transform: rotate(180deg);
 }
 
-.shows__authors,
 .choices__inner {
   margin: -1px;
-  padding: 9.5px 7px 11px;
+  padding: 7px 7px 6px;
   position: relative;
   width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  border: none;
+  min-height: 40px;
+  font-size: 1rem;
+  line-height: 1;
   background-color: var(--color-light);
+  border: none;
   border: 1px solid var(--color-light);
   border-radius: 10px;
   cursor: pointer;
@@ -1012,6 +1033,11 @@ body {
 .show {
   background-color: var(--color-white);
   transition: outline .1s ease-in-out;
+  animation: fadein .3s;
+}
+
+.show--hidden {
+  display: none;
 }
 
 .show:focus-within {
@@ -1296,10 +1322,10 @@ body {
 }
 
 .guests__type-names {
-  padding-block: 20px 22px;
+  padding-block: 18px 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 27px 28px;
   transition-property: height, visibility;
   transition-timing-function: ease-in-out;
 }
@@ -2347,6 +2373,10 @@ body {
     width: calc(50% - 15px);
   }
 
+  .choices {
+    margin-bottom: 47px;
+  }
+
   .shows__cards {
     margin-bottom: 60px;
   }
@@ -2442,14 +2472,14 @@ body {
   }
 
   .guests__type-names {
-    padding-block: 30px 27px;
+    padding-block: 29px 31px;
   }
 
   .guests__name {
     width: 160.5px;
   }
 
-  .guests__link {
+  .guests__btn {
     max-width: none;
     font-size: 1rem;
   }
@@ -2491,13 +2521,13 @@ body {
   }
 
   .playlists__genres-title {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 1rem;
   }
 
   .playlists__genres-wrapper {
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
   .playlists__genres {
@@ -2507,7 +2537,7 @@ body {
     flex-direction: column;
     align-content: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 30px 34px;
   }
 
   .playlists__genre {
@@ -2837,7 +2867,7 @@ body {
 
   .header__player {
     margin-right: 0;
-    padding: 2.5px 10px;
+    padding: 2.5px 10px 2.5px 16px;
     display: flex;
     align-items: center;
     gap: 8.5px;
@@ -2931,7 +2961,7 @@ body {
     flex-shrink: 0;
   }
 
-  .shows__authors {
+  .choices {
     margin-bottom: 227px;
     width: 100%;
   }
@@ -2982,8 +3012,12 @@ body {
   }
 
   .guests__type-names {
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     row-gap: 13px;
+  }
+
+  .guests__name {
+    width: 160.2px;
   }
 
   .guests__person-info {
@@ -3015,7 +3049,7 @@ body {
   }
 
   .playlists__genres {
-    gap: 16.5px 35px;
+    gap: 16px 35px;
     width: 65%;
   }
 
@@ -3218,7 +3252,7 @@ body {
   }
 
   .guests__name {
-    width: calc(25% - 22.5px);
+    width: calc(25% - 21px);
   }
 
   .guest__photo {
