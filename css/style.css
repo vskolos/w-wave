@@ -1795,6 +1795,23 @@ body {
   opacity: 1;
 }
 
+.speaker__slider .swiper-pagination-bullet:hover::after {
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  opacity: .5;
+}
+
+.speaker__slider .swiper-pagination-bullet:focus-visible {
+  outline: 1px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .speaker__slider .swiper-pagination-bullet:nth-child(3n + 1) {
   background-color: #874158;
 }
@@ -1807,7 +1824,7 @@ body {
   background-color: #1D6C4E;
 }
 
-.swiper-pagination-bullet-active::after {
+.speaker__slider .swiper-pagination-bullet-active::after {
   position: absolute;
   top: calc(50% - 3px);
   left: calc(50% - 3px);
@@ -2032,6 +2049,11 @@ body {
     border-color .1s ease-in-out;
 }
 
+.about__input-label {
+  position: relative;
+  width: 100%;
+}
+
 .about__input {
   padding: 16px 23px;
   width: 100%;
@@ -2057,6 +2079,18 @@ body {
 .about__textarea::placeholder,
 .about__input::placeholder {
   color: var(--color-text-gray);
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 4px;
+  left: 23px;
+  font-size: .75rem;
+  line-height: 1;
+}
+
+.about__input.just-validate-error-field {
+  border-color: var(--color-red);
 }
 
 .about__btn {
@@ -2840,6 +2874,11 @@ body {
     font-size: 1.25rem;
   }
 
+  .just-validate-error-label {
+    top: 9px;
+    left: 32px;
+  }
+
   .about__btn {
     padding: 25px 54px;
     font-size: 1.25rem;
@@ -3249,7 +3288,7 @@ body {
     flex-wrap: wrap;
   }
 
-  .about__input {
+  .about__input-label {
     width: calc(50% - 15px);
   }
 

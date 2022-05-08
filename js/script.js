@@ -252,6 +252,28 @@
       }
     });
 
+    // ABOUT //
+
+    // Form validation
+    const validation = new JustValidate('.about__form');
+    validation
+      .addField('#name', [
+        {
+          rule: 'required',
+          errorMessage: 'Введите ваше имя',
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'Введите ваш e-mail',
+        },
+        {
+          rule: 'email',
+          errorMessage: 'E-mail введен некорректно',
+        },
+      ])
+
   });
 
 })();

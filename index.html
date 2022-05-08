@@ -23,6 +23,7 @@
   <script defer src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
   <script defer src="node_modules/accordion-js/dist/accordion.min.js"></script>
   <script defer src="node_modules/swiper/swiper-bundle.min.js"></script>
+  <script defer src="node_modules/just-validate/dist/just-validate.production.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 
@@ -3753,8 +3754,12 @@
         </ul>
         <form class="about__form" method="post">
           <textarea class="about__textarea" placeholder="Что скажете?"></textarea>
-          <input class="about__input" type="text" placeholder="Имя">
-          <input class="about__input" type="email" placeholder="E-mail">
+          <label class="about__input-label">
+            <input id="name" class="about__input" type="text" placeholder="Имя">
+          </label>
+          <label class="about__input-label">
+            <input id="email" class="about__input" type="email" placeholder="E-mail">
+          </label>
           <button type="submit" class="btn about__btn">
             Отправить
           </button>

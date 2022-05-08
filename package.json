@@ -2,6 +2,7 @@
   "dependencies": {
     "accordion-js": "^3.3.0",
     "choices.js": "^10.1.0",
+    "just-validate": "^3.7.0",
     "swiper": "^8.1.4"
   }
 }
