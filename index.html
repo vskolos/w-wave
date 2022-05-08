@@ -18,9 +18,11 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="node_modules/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
   <script defer src="node_modules/accordion-js/dist/accordion.min.js"></script>
+  <script defer src="node_modules/swiper/swiper-bundle.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 
@@ -3071,57 +3073,57 @@
             <form class="playlists__genres-wrapper">
               <ul class="lst playlists__genres">
                 <li class="playlists__genre">
-                  <label class="playlists__label playlists__label--active">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres" checked>
+                  <label class="playlists__label">
+                    <input class="playlists__radio visually-hidden" data-id="1" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Постпанк
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="2" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Хардкор
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="3" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Панк-рок
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="4" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Рок
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="5" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Прогрессивный рок
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="6" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Электронная музыка
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="7" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Классическая музыка
                   </label>
                 </li>
                 <li class="playlists__genre">
                   <label class="playlists__label">
-                    <input class="playlists__radio visually-hidden" type="radio" name="genres">
+                    <input class="playlists__radio visually-hidden" data-id="8" type="radio" name="genres">
                     <span class="playlists__radio-custom"></span>
                     Звуки природы и шум города
                   </label>
@@ -3141,212 +3143,447 @@
               </svg>
             </div>
           </div>
-          <ul class="lst playlists__cards">
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-ploho-desktop.jpg, img/playlist-ploho-desktop@2x.jpg 2x">
-                  <img src="img/playlist-ploho.jpg" srcset="img/playlist-ploho@2x.jpg 2x" alt="Ploho - 3 последних альбома">
-                </picture>
+          <div class="playlists__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="playlists__cards swiper-slide">
+                <div class="playlist playlists__card" data-id="1 2 5 6 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-ploho-desktop.jpg, img/playlist-ploho-desktop@2x.jpg 2x">
+                      <img src="img/playlist-ploho.jpg" srcset="img/playlist-ploho@2x.jpg 2x" alt="Ploho - 3 последних альбома">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Ploho
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 3 4 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-molchat-doma-desktop.jpg, img/playlist-molchat-doma-desktop@2x.jpg 2x">
+                      <img src="img/playlist-molchat-doma.jpg" srcset="img/playlist-molchat-doma@2x.jpg 2x" alt="Molchat Doma - Все песни">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Molchat Doma
+                    </h3>
+                    <p class="playlist__descr">
+                      Все песни
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 2 3 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-motorama-desktop.jpg, img/playlist-motorama-desktop@2x.jpg 2x">
+                      <img src="img/playlist-motorama.jpg" srcset="img/playlist-motorama@2x.jpg 2x" alt="Motorama - Все синглы">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Motorama
+                    </h3>
+                    <p class="playlist__descr">
+                      Все синглы
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 4 5 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-human-tetris-desktop.jpg, img/playlist-human-tetris-desktop@2x.jpg 2x">
+                      <img src="img/playlist-human-tetris.jpg" srcset="img/playlist-human-tetris@2x.jpg 2x" alt="Human Tetris - 3 последних альбома">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Human Tetris
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 3 5 6 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-buerak-desktop.jpg, img/playlist-buerak-desktop@2x.jpg 2x">
+                      <img src="img/playlist-buerak.jpg" srcset="img/playlist-buerak@2x.jpg 2x" alt="Буерак - Все EP">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Буерак
+                    </h3>
+                    <p class="playlist__descr">
+                      Все EP
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 2 4 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-iyulskie-dni-desktop.jpg, img/playlist-iyulskie-dni-desktop@2x.jpg 2x">
+                      <img src="img/playlist-iyulskie-dni.jpg" srcset="img/playlist-iyulskie-dni@2x.jpg 2x" alt="Июльские Дни - Альбом «Колокол»">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Июльские Дни
+                    </h3>
+                    <p class="playlist__descr">
+                      Альбом «Колокол»
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 3 5 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-joy-division-desktop.jpg, img/playlist-joy-division-desktop@2x.jpg 2x">
+                      <img src="img/playlist-joy-division.jpg" srcset="img/playlist-joy-division@2x.jpg 2x" alt="Joy Division - Лучшее за всё время">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Joy Division
+                    </h3>
+                    <p class="playlist__descr">
+                      Лучшее за всё время
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 4 5 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-the-cure-desktop.jpg, img/playlist-the-cure-desktop@2x.jpg 2x">
+                      <img src="img/playlist-the-cure.jpg" srcset="img/playlist-the-cure@2x.jpg 2x" alt="The Cure - Лучшее за всё время">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      The Cure
+                    </h3>
+                    <p class="playlist__descr">
+                      Лучшее за всё время
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 2 3 5 6">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-the-smiths-desktop.jpg, img/playlist-the-smiths-desktop@2x.jpg 2x">
+                      <img src="img/playlist-the-smiths.jpg" srcset="img/playlist-the-smiths@2x.jpg 2x" alt="The Smiths - Период 1984-1988">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      The Smiths
+                    </h3>
+                    <p class="playlist__descr">
+                      Период 1984-1988
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 5 6 7 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-new-order-desktop.jpg, img/playlist-new-order-desktop@2x.jpg 2x">
+                      <img src="img/playlist-new-order.jpg" srcset="img/playlist-new-order@2x.jpg 2x" alt="New Order - Хиты">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      New Order
+                    </h3>
+                    <p class="playlist__descr">
+                      Хиты
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 3 4 5 6">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-bauhaus-desktop.jpg, img/playlist-bauhaus-desktop@2x.jpg 2x">
+                      <img src="img/playlist-bauhaus.jpg" srcset="img/playlist-bauhaus@2x.jpg 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Bauhaus
+                    </h3>
+                    <p class="playlist__descr">
+                      Все синглы
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 4 5 7 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-gang-of-four-desktop.jpg, img/playlist-gang-of-four-desktop@2x.jpg 2x">
+                      <img src="img/playlist-gang-of-four.jpg" srcset="img/playlist-gang-of-four@2x.jpg 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Gang Of Four
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 3 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-ploho-desktop.jpg, img/playlist-ploho-desktop@2x.jpg 2x">
+                      <img src="img/playlist-ploho.jpg" srcset="img/playlist-ploho@2x.jpg 2x" alt="Ploho - 3 последних альбома">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Ploho
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 4 5 7 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-molchat-doma-desktop.jpg, img/playlist-molchat-doma-desktop@2x.jpg 2x">
+                      <img src="img/playlist-molchat-doma.jpg" srcset="img/playlist-molchat-doma@2x.jpg 2x" alt="Molchat Doma - Все песни">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Molchat Doma
+                    </h3>
+                    <p class="playlist__descr">
+                      Все песни
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 5 6">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-motorama-desktop.jpg, img/playlist-motorama-desktop@2x.jpg 2x">
+                      <img src="img/playlist-motorama.jpg" srcset="img/playlist-motorama@2x.jpg 2x" alt="Motorama - Все синглы">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Motorama
+                    </h3>
+                    <p class="playlist__descr">
+                      Все синглы
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 3 4 5 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-human-tetris-desktop.jpg, img/playlist-human-tetris-desktop@2x.jpg 2x">
+                      <img src="img/playlist-human-tetris.jpg" srcset="img/playlist-human-tetris@2x.jpg 2x" alt="Human Tetris - 3 последних альбома">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Human Tetris
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="3 4 5 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-buerak-desktop.jpg, img/playlist-buerak-desktop@2x.jpg 2x">
+                      <img src="img/playlist-buerak.jpg" srcset="img/playlist-buerak@2x.jpg 2x" alt="Буерак - Все EP">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Буерак
+                    </h3>
+                    <p class="playlist__descr">
+                      Все EP
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 4 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-iyulskie-dni-desktop.jpg, img/playlist-iyulskie-dni-desktop@2x.jpg 2x">
+                      <img src="img/playlist-iyulskie-dni.jpg" srcset="img/playlist-iyulskie-dni@2x.jpg 2x" alt="Июльские Дни - Альбом «Колокол»">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Июльские Дни
+                    </h3>
+                    <p class="playlist__descr">
+                      Альбом «Колокол»
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--ru-RU"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="3 5 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-joy-division-desktop.jpg, img/playlist-joy-division-desktop@2x.jpg 2x">
+                      <img src="img/playlist-joy-division.jpg" srcset="img/playlist-joy-division@2x.jpg 2x" alt="Joy Division - Лучшее за всё время">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Joy Division
+                    </h3>
+                    <p class="playlist__descr">
+                      Лучшее за всё время
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="1 2 5 7 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-the-cure-desktop.jpg, img/playlist-the-cure-desktop@2x.jpg 2x">
+                      <img src="img/playlist-the-cure.jpg" srcset="img/playlist-the-cure@2x.jpg 2x" alt="The Cure - Лучшее за всё время">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      The Cure
+                    </h3>
+                    <p class="playlist__descr">
+                      Лучшее за всё время
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="3 4 6">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-the-smiths-desktop.jpg, img/playlist-the-smiths-desktop@2x.jpg 2x">
+                      <img src="img/playlist-the-smiths.jpg" srcset="img/playlist-the-smiths@2x.jpg 2x" alt="The Smiths - Период 1984-1988">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      The Smiths
+                    </h3>
+                    <p class="playlist__descr">
+                      Период 1984-1988
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 4 5 7">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-new-order-desktop.jpg, img/playlist-new-order-desktop@2x.jpg 2x">
+                      <img src="img/playlist-new-order.jpg" srcset="img/playlist-new-order@2x.jpg 2x" alt="New Order - Хиты">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      New Order
+                    </h3>
+                    <p class="playlist__descr">
+                      Хиты
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="4 5 6 7 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-bauhaus-desktop.jpg, img/playlist-bauhaus-desktop@2x.jpg 2x">
+                      <img src="img/playlist-bauhaus.jpg" srcset="img/playlist-bauhaus@2x.jpg 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Bauhaus
+                    </h3>
+                    <p class="playlist__descr">
+                      Все синглы
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-2.mp3"></audio>
+                </div>
+                <div class="playlist playlists__card" data-id="2 3 6 8">
+                  <div class="playlist__image">
+                    <picture>
+                      <source media="(min-width: 1310px)" srcset="img/playlist-gang-of-four-desktop.jpg, img/playlist-gang-of-four-desktop@2x.jpg 2x">
+                      <img src="img/playlist-gang-of-four.jpg" srcset="img/playlist-gang-of-four@2x.jpg 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="playlist__info">
+                    <h3 class="playlist__title">
+                      Gang Of Four
+                    </h3>
+                    <p class="playlist__descr">
+                      3 последних альбома
+                    </p>
+                  </div>
+                  <div class="playlist__country playlist__country--en-GB"></div>
+                  <audio src="music/audio-1.mp3"></audio>
+                </div>
               </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Ploho
-                </h3>
-                <p class="playlist__descr">
-                  3 последних альбома
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-molchat-doma-desktop.jpg, img/playlist-molchat-doma-desktop@2x.jpg 2x">
-                  <img src="img/playlist-molchat-doma.jpg" srcset="img/playlist-molchat-doma@2x.jpg 2x" alt="Molchat Doma - Все песни">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Molchat Doma
-                </h3>
-                <p class="playlist__descr">
-                  Все песни
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-motorama-desktop.jpg, img/playlist-motorama-desktop@2x.jpg 2x">
-                  <img src="img/playlist-motorama.jpg" srcset="img/playlist-motorama@2x.jpg 2x" alt="Motorama - Все синглы">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Motorama
-                </h3>
-                <p class="playlist__descr">
-                  Все синглы
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-human-tetris-desktop.jpg, img/playlist-human-tetris-desktop@2x.jpg 2x">
-                  <img src="img/playlist-human-tetris.jpg" srcset="img/playlist-human-tetris@2x.jpg 2x" alt="Human Tetris - 3 последних альбома">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Human Tetris
-                </h3>
-                <p class="playlist__descr">
-                  3 последних альбома
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-buerak-desktop.jpg, img/playlist-buerak-desktop@2x.jpg 2x">
-                  <img src="img/playlist-buerak.jpg" srcset="img/playlist-buerak@2x.jpg 2x" alt="Буерак - Все EP">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Буерак
-                </h3>
-                <p class="playlist__descr">
-                  Все EP
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-iyulskie-dni-desktop.jpg, img/playlist-iyulskie-dni-desktop@2x.jpg 2x">
-                  <img src="img/playlist-iyulskie-dni.jpg" srcset="img/playlist-iyulskie-dni@2x.jpg 2x" alt="Июльские Дни - Альбом «Колокол»">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Июльские Дни
-                </h3>
-                <p class="playlist__descr">
-                  Альбом «Колокол»
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--ru-RU"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-joy-division-desktop.jpg, img/playlist-joy-division-desktop@2x.jpg 2x">
-                  <img src="img/playlist-joy-division.jpg" srcset="img/playlist-joy-division@2x.jpg 2x" alt="Joy Division - Лучшее за всё время">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Joy Division
-                </h3>
-                <p class="playlist__descr">
-                  Лучшее за всё время
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-the-cure-desktop.jpg, img/playlist-the-cure-desktop@2x.jpg 2x">
-                  <img src="img/playlist-the-cure.jpg" srcset="img/playlist-the-cure@2x.jpg 2x" alt="The Cure - Лучшее за всё время">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  The Cure
-                </h3>
-                <p class="playlist__descr">
-                  Лучшее за всё время
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-the-smiths-desktop.jpg, img/playlist-the-smiths-desktop@2x.jpg 2x">
-                  <img src="img/playlist-the-smiths.jpg" srcset="img/playlist-the-smiths@2x.jpg 2x" alt="The Smiths - Период 1984-1988">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  The Smiths
-                </h3>
-                <p class="playlist__descr">
-                  Период 1984-1988
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-new-order-desktop.jpg, img/playlist-new-order-desktop@2x.jpg 2x">
-                  <img src="img/playlist-new-order.jpg" srcset="img/playlist-new-order@2x.jpg 2x" alt="New Order - Хиты">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  New Order
-                </h3>
-                <p class="playlist__descr">
-                  Хиты
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-bauhaus-desktop.jpg, img/playlist-bauhaus-desktop@2x.jpg 2x">
-                  <img src="img/playlist-bauhaus.jpg" srcset="img/playlist-bauhaus@2x.jpg 2x" alt="">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Bauhaus
-                </h3>
-                <p class="playlist__descr">
-                  Все синглы
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-            <li class="playlist playlists__card">
-              <div class="playlist__image">
-                <picture>
-                  <source media="(min-width: 1310px)" srcset="img/playlist-gang-of-four-desktop.jpg, img/playlist-gang-of-four-desktop@2x.jpg 2x">
-                  <img src="img/playlist-gang-of-four.jpg" srcset="img/playlist-gang-of-four@2x.jpg 2x" alt="">
-                </picture>
-              </div>
-              <div class="playlist__info">
-                <h3 class="playlist__title">
-                  Gang Of Four
-                </h3>
-                <p class="playlist__descr">
-                  3 последних альбома
-                </p>
-              </div>
-              <div class="playlist__country playlist__country--en-GB"></div>
-            </li>
-          </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
           <div class="playlists__age-wrapper-after">
             <p class="playlists__age-info">
               Раздел «Плейлисты» может содержать информацию, не&nbsp;предназначенную для несовершеннолетних.

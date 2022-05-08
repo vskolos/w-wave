@@ -2,6 +2,24 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
+    // Handle audio play/pause
+    function handleAudio(playerElement, playBtnClass, pauseBtnClass, hiddenClass) {
+      const playBtn = playerElement.querySelector(`.${playBtnClass}`);
+      const pauseBtn = playerElement.querySelector(`.${pauseBtnClass}`);
+      const audio = playerElement.querySelector('audio');
+
+      playBtn.addEventListener('click', () => {
+        playBtn.classList.toggle(`${hiddenClass}`);
+        pauseBtn.classList.toggle(`${hiddenClass}`);
+        audio.play();
+      });
+      pauseBtn.addEventListener('click', () => {
+        playBtn.classList.toggle(`${hiddenClass}`);
+        pauseBtn.classList.toggle(`${hiddenClass}`);
+        audio.pause();
+      });
+    }
+
     // HEADER //
 
     // Burger menu open/close
@@ -37,43 +55,13 @@
 
     // Music play/pause
     const headerPlayers = document.querySelectorAll('.header__player, .header__bottom .site-nav__item:last-child');
-    headerPlayers.forEach(headerPlayer => {
-      const playBtn = headerPlayer.querySelector('.header__play-btn');
-      const pauseBtn = headerPlayer.querySelector('.header__pause-btn');
-      const audio = headerPlayer.querySelector('audio');
-
-      playBtn.addEventListener('click', () => {
-        playBtn.classList.toggle('header__music-btn--hidden');
-        pauseBtn.classList.toggle('header__music-btn--hidden');
-        audio.play();
-      });
-      pauseBtn.addEventListener('click', () => {
-        playBtn.classList.toggle('header__music-btn--hidden');
-        pauseBtn.classList.toggle('header__music-btn--hidden');
-        audio.pause();
-      });
-    });
+    headerPlayers.forEach(headerPlayer => handleAudio(headerPlayer, 'header__play-btn', 'header__pause-btn', 'header__music-btn--hidden'));
 
     // PODCASTS //
     const podcasts = document.querySelectorAll('.podcast');
 
     // Music play/pause
-    podcasts.forEach(podcast => {
-      const playBtn = podcast.querySelector('.podcast__play-btn');
-      const pauseBtn = podcast.querySelector('.podcast__pause-btn');
-      const audio = podcast.querySelector('audio');
-
-      playBtn.addEventListener('click', () => {
-        playBtn.classList.toggle('podcast__music-btn--hidden');
-        pauseBtn.classList.toggle('podcast__music-btn--hidden');
-        audio.play();
-      });
-      pauseBtn.addEventListener('click', () => {
-        playBtn.classList.toggle('podcast__music-btn--hidden');
-        pauseBtn.classList.toggle('podcast__music-btn--hidden');
-        audio.pause();
-      });
-    });
+    podcasts.forEach(podcast => handleAudio(podcast, 'podcast__play-btn', 'podcast__pause-btn', 'podcast__music-btn--hidden'));
 
     // Show more
     const podcastsPerPage = window.innerWidth < 768 ? 4 : 8;
@@ -124,7 +112,9 @@
     });
     authors.passedElement.element.addEventListener('choice', filterShows);
 
-    // Guests types accordion
+    // GUESTS //
+
+    // Types accordion
     const guestTypes = new Accordion('.guests__types', {
       duration: 300,
       elementClass: 'guests__type',
@@ -155,8 +145,99 @@
         } else {
           document.querySelector(`[data-target="nobody"]`).classList.add('guest--active');
         }
+      });
+    });
+
+    // PLAYLISTS //
+
+    // Label background for checked genre on mobile
+    const labels = document.querySelectorAll('.playlists__label');
+    labels.forEach(label => {
+      const input = label.querySelector('input');
+      input.addEventListener('change', () => {
+        labels.forEach(label => {
+          label.classList.remove('playlists__label--active');
+        });
+        label.classList.add('playlists__label--active');
+      });
+    });
+
+    // Filter by genre
+    const playlists = document.querySelectorAll('.playlist');
+    const genres = document.querySelectorAll('.playlists__radio');
+    function filterPlaylists() {
+      genres.forEach(genre => {
+        if (genre.checked) {
+          playlists.forEach(playlist => {
+            if (playlist.dataset.id.split(' ').includes(genre.dataset.id)) {
+              playlist.classList.remove('playlist--hidden');
+            } else {
+              playlist.classList.add('playlist--hidden');
+            }
+          });
+        }
+      });
+    }
+
+    // Slider
+    const swiper = new Swiper('.playlists__slider', {
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      autoHeight: true,
+      spaceBetween: 30,
+    });
+
+    // Distribute playlists by slides
+    const PLAYLISTS_PER_SLIDE = 12
+    const sliderWrapper = document.querySelector('.swiper-wrapper');
+    function distributePlaylists() {
+      const activePlaylists = [...playlists].filter(playlist => !playlist.classList.contains('playlist--hidden'));
+      const slidesAmount = Math.ceil(activePlaylists.length / PLAYLISTS_PER_SLIDE);
+      let i = 0;
+      const slides = [];
+      while (i++ < slidesAmount) {
+        const slide = document.createElement('div');
+        slide.className = 'playlists__cards swiper-slide';
+        slides.push(slide);
+      }
+      slides.forEach((slide, index) => {
+        let i = 0;
+        while (i < PLAYLISTS_PER_SLIDE) {
+          if (activePlaylists[PLAYLISTS_PER_SLIDE * index + i]) {
+            slide.append(activePlaylists[PLAYLISTS_PER_SLIDE * index + i]);
+          }
+          i++;
+        }
+      });
+      sliderWrapper.innerHTML = '';
+      sliderWrapper.append(...slides);
+      swiper.update();
+      swiper.slideTo(0);
+    }
+
+    function updatePlaylists() {
+      filterPlaylists();
+      distributePlaylists();
+    }
+    genres.forEach(genre => {
+      genre.addEventListener('change', updatePlaylists);
+    });
+    swiper.on('init', distributePlaylists());
+    if (window.innerWidth < 1024) {
+      swiper.on('slideChange', () => {
+        document.querySelector('.playlists__genres-title').scrollIntoView(true);
       })
-    })
+    }
+
+    // Music play/pause
+    playlists.forEach(playlist => handleAudio(playlist, 'playlist__image', 'playlist__info', 'playlist__music-btn--hidden'));
+
   });
 
 })();
