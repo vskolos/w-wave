@@ -191,6 +191,12 @@
       },
       autoHeight: true,
       spaceBetween: 30,
+      a11y: {
+        paginationBulletMessage: 'Перейти к слайду {{index}}',
+        prevSlideMessage: 'Перейти к предыдущему слайду',
+        nextSlideMessage: 'Перейти к следующему слайду',
+
+      },
     });
 
     // Distribute playlists by slides
@@ -249,7 +255,10 @@
       spaceBetween: 30,
       autoplay: {
         delay: 5000,
-      }
+      },
+      a11y: {
+        paginationBulletMessage: 'Перейти к слайду {{index}}',
+      },
     });
 
     // ABOUT //
