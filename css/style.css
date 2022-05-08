@@ -3383,6 +3383,10 @@ body {
     min-width: 350px;
   }
 
+  .playlists__genres-wrapper {
+    margin-bottom: 30px;
+  }
+
   .playlists__genres {
     max-height: none;
     width: auto;
