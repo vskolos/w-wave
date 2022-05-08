@@ -396,5 +396,11 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage: 'E-mail введен некорректно',
       },
     ])
+    .addField('#privacy', [
+      {
+        rule: 'required',
+        errorMessage: 'Необходимо согласие с обработкой данных',
+      },
+    ]);
 
 });
