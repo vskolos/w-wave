@@ -247,8 +247,9 @@
         clickable: true,
       },
       spaceBetween: 30,
-      breakpoints: {
-      },
+      autoplay: {
+        delay: 5000,
+      }
     });
 
   });
