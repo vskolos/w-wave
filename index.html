@@ -3602,13 +3602,34 @@
     <section class="speaker" id="speaker">
       <div class="container">
         <div class="speaker-wrapper">
-          <div class="speaker__photo">
-            <picture>
-              <source media="(min-width: 1310px)" srcset="img/speaker-desktop.png, img/speaker-desktop@2x.png 2x">
-              <source media="(min-width: 1024px)" srcset="img/speaker-tablet-landscape.png, img/speaker-tablet-landscape@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/speaker-tablet.png, img/speaker-tablet@2x.png 2x">
-              <img src="img/speaker.png" srcset="img/speaker@2x.png 2x" alt="Портативный радиоприёмник-колонка W-Wave 1.0 xm">
-            </picture>
+          <div class="speaker__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="speaker__photo swiper-slide">
+                <picture>
+                  <source media="(min-width: 1310px)" srcset="img/speaker-desktop.png, img/speaker-desktop@2x.png 2x">
+                  <source media="(min-width: 1024px)" srcset="img/speaker-tablet-landscape.png, img/speaker-tablet-landscape@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/speaker-tablet.png, img/speaker-tablet@2x.png 2x">
+                  <img src="img/speaker.png" srcset="img/speaker@2x.png 2x" alt="Портативный радиоприёмник-колонка W-Wave 1.0 xm">
+                </picture>
+              </div>
+              <div class="speaker__photo swiper-slide">
+                <picture>
+                  <source media="(min-width: 1310px)" srcset="img/speaker-desktop.png, img/speaker-desktop@2x.png 2x">
+                  <source media="(min-width: 1024px)" srcset="img/speaker-tablet-landscape.png, img/speaker-tablet-landscape@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/speaker-tablet.png, img/speaker-tablet@2x.png 2x">
+                  <img src="img/speaker.png" srcset="img/speaker@2x.png 2x" alt="Портативный радиоприёмник-колонка W-Wave 1.0 xm">
+                </picture>
+              </div>
+              <div class="speaker__photo swiper-slide">
+                <picture>
+                  <source media="(min-width: 1310px)" srcset="img/speaker-desktop.png, img/speaker-desktop@2x.png 2x">
+                  <source media="(min-width: 1024px)" srcset="img/speaker-tablet-landscape.png, img/speaker-tablet-landscape@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/speaker-tablet.png, img/speaker-tablet@2x.png 2x">
+                  <img src="img/speaker.png" srcset="img/speaker@2x.png 2x" alt="Портативный радиоприёмник-колонка W-Wave 1.0 xm">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
           <div class="speaker__info">
             <h2 class="speaker__title">
@@ -3628,7 +3649,7 @@
             <p class="speaker__price">
               2800 руб
             </p>
-            <a href="#" class="lnk speaker__btn">
+            <button class="btn speaker__btn">
               <svg class="speaker__btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_13094_492)">
                 <path d="M10 20C15.5228 20 20 15.5228 20 9.99998C20 4.47714 15.5228 0 10 0C4.47724 0 0 4.47714 0 9.99998C0 15.5228 4.47724 20 10 20Z" fill="#F0D288"/>
@@ -3641,7 +3662,7 @@
                 </defs>
               </svg>
               Купить на Яндекс.Маркет
-            </a>
+            </button>
           </div>
         </div>
       </div>

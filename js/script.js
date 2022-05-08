@@ -180,13 +180,13 @@
     }
 
     // Slider
-    const swiper = new Swiper('.playlists__slider', {
+    const playlistsSlider = new Swiper('.playlists__slider', {
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next'
+        prevEl: '.playlists__slider .swiper-button-prev',
+        nextEl: '.playlists__slider .swiper-button-next'
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.playlists__slider .swiper-pagination',
         type: 'fraction',
       },
       autoHeight: true,
@@ -195,7 +195,7 @@
 
     // Distribute playlists by slides
     const PLAYLISTS_PER_SLIDE = 12
-    const sliderWrapper = document.querySelector('.swiper-wrapper');
+    const sliderWrapper = document.querySelector('.playlists__slider .swiper-wrapper');
     function distributePlaylists() {
       const activePlaylists = [...playlists].filter(playlist => !playlist.classList.contains('playlist--hidden'));
       const slidesAmount = Math.ceil(activePlaylists.length / PLAYLISTS_PER_SLIDE);
@@ -217,8 +217,8 @@
       });
       sliderWrapper.innerHTML = '';
       sliderWrapper.append(...slides);
-      swiper.update();
-      swiper.slideTo(0);
+      playlistsSlider.update();
+      playlistsSlider.slideTo(0);
     }
 
     function updatePlaylists() {
@@ -228,15 +228,28 @@
     genres.forEach(genre => {
       genre.addEventListener('change', updatePlaylists);
     });
-    swiper.on('init', distributePlaylists());
+    playlistsSlider.on('init', distributePlaylists());
     if (window.innerWidth < 1024) {
-      swiper.on('slideChange', () => {
+      playlistsSlider.on('slideChange', () => {
         document.querySelector('.playlists__genres-title').scrollIntoView(true);
       })
     }
 
     // Music play/pause
     playlists.forEach(playlist => handleAudio(playlist, 'playlist__image', 'playlist__info', 'playlist__music-btn--hidden'));
+
+    // SPEAKER //
+
+    // Slider
+    const speakerSlider = new Swiper('.speaker__slider', {
+      pagination: {
+        el: '.speaker__slider .swiper-pagination',
+        clickable: true,
+      },
+      spaceBetween: 30,
+      breakpoints: {
+      },
+    });
 
   });
 
