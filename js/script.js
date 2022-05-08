@@ -257,6 +257,12 @@
     // Form validation
     const validation = new JustValidate('.about__form');
     validation
+      .addField('#message', [
+        {
+          rule: 'required',
+          errorMessage: 'Введите сообщение',
+        },
+      ])
       .addField('#name', [
         {
           rule: 'required',

@@ -2036,6 +2036,11 @@ body {
   gap: 30px;
 }
 
+.about__textarea-label {
+  position: relative;
+  width: 100%;
+}
+
 .about__textarea {
   padding: 16px 23px;
   width: 100%;
@@ -2089,6 +2094,7 @@ body {
   line-height: 1;
 }
 
+.about__textarea.just-validate-error-field,
 .about__input.just-validate-error-field {
   border-color: var(--color-red);
 }
