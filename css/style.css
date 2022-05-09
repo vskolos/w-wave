@@ -2019,6 +2019,13 @@ body {
     -webkit-transform .1s ease-in-out;
 }
 
+.playlist__play-btn:focus-visible,
+.playlist__pause-btn:focus-visible {
+  outline: none;
+}
+
+.playlist__play-btn:focus-visible,
+.playlist__pause-btn:focus-visible,
 .playlist:hover .playlist__play-btn,
 .playlist:hover .playlist__pause-btn,
 .playlist:focus-visible .playlist__play-btn,
@@ -2060,7 +2067,8 @@ body {
   border-color: var(--color-primary);
 }
 
-.playlist:focus-visible > .playlist__info {
+.playlist:focus-visible > .playlist__info,
+.playlist:focus-within > .playlist__info {
   background-color: var(--color-primary-light);
   border-color: var(--color-primary-light);
 }
